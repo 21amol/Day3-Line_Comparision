@@ -5,20 +5,29 @@ import java.util.Scanner;
 
 public class LineComparison {
     static Scanner sc = new Scanner(System.in);
-    static double lenthLine1 = 0;
-    static double lenthLine2 = 0;
+    static float lenthLine1 = 0;
+    static float lenthLine2 = 0;
+
+    static void compare() {
+
+        if (lenthLine2 > lenthLine1) {
+            System.out.println("Line 2 is greater than Line 1");
+        } else {
+            System.out.println("Line 2 is smaller than Line 1");
+        }
+    }
 
     static void equals() {
         System.out.println("Enter the value of x4: ");
-        double x4 = sc.nextDouble();
+        float x4 = sc.nextFloat();
         System.out.println("Enter the value of x3: ");
-        double x3 = sc.nextDouble();
+        float x3 = sc.nextFloat();
         System.out.println("Enter the value of y4: ");
-        double y4 = sc.nextDouble();
+        float y4 = sc.nextFloat();
         System.out.println("Enter the value of y3: ");
-        double y3 = sc.nextDouble();
-        lenthLine2 = Math.sqrt((x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
-        System.out.println("Length of line is: " + lenthLine2);
+        float y3 = sc.nextFloat();
+        lenthLine2 = (float) Math.sqrt((x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
+        System.out.println("Length of line 2 is: " + lenthLine2);
 
         if (lenthLine2 == lenthLine1) {
             System.out.println("Two lines are equal");
@@ -43,10 +52,11 @@ public class LineComparison {
         double y2 = sc.nextDouble();
 
         // Calculating lenth between co-ordinates.
-        lenthLine1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-        System.out.println("Length of line is: " + lenthLine1);
+        lenthLine1 = (float) Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        System.out.println("Length of line 1 is: " + lenthLine1);
 
         equals();
+        compare();
 
     }
 }
