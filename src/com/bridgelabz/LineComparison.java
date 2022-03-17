@@ -8,7 +8,7 @@ public class LineComparison {
     static float lenthLine1 = 0;
     static float lenthLine2 = 0;
 
-    static void compareTo() {
+    void compareTo() {
 
         if (lenthLine2 > lenthLine1) {
             System.out.println("Line 2 is greater than Line 1");
@@ -17,7 +17,7 @@ public class LineComparison {
         }
     }
 
-    static void equalsTo() {
+    void equalsTo() {
         System.out.println("Enter the value of x4: ");
         float x4 = sc.nextFloat();
         System.out.println("Enter the value of x3: ");
@@ -40,6 +40,7 @@ public class LineComparison {
         // welcome to line comparison program.
 
         // Using OOPS.....
+        LineComparison lc = new LineComparison();          // object creation.....
 
         // Co-ordinates of X.
         System.out.println("Enter the value of x1: ");
@@ -57,8 +58,8 @@ public class LineComparison {
         lenthLine1 = (float) Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
         System.out.println("Length of line 1 is: " + lenthLine1);
 
-        equalsTo();
-        compareTo();
+        lc.equalsTo();
+        lc.compareTo();
 
     }
 }
